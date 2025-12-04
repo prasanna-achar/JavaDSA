@@ -3,6 +3,6 @@ package PatternProgramming;
 public class Main {
 
 	public static void main(String[] args) {
-		Problems.printPattern8(5);
+		Problems.printPattern18(5);
 	}
 }
