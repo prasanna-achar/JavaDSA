@@ -70,7 +70,9 @@ public class Main {
 		
 		
 		
-		System.out.println(Problems.ropeCutting(15, 5, 8, 7));
+//		System.out.println(Problems.ropeCutting(15, 5, 8, 7));
+		
+		Problems.printPermutationStrings("abc");
 	}
 
 }

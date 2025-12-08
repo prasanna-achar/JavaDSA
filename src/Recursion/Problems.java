@@ -84,4 +84,33 @@ public class Problems {
 		
 		return pieces == -1? -1: pieces+1;
 	}
+	
+	public static void printPermutationStrings(char[] arr, int fi) {
+		if(fi == arr.length-1) {
+			System.out.println(arr);
+			return;
+		}
+		
+		for(int i =fi; i < arr.length; i++) {
+			swap(arr, i, fi);
+			printPermutationStrings(arr, fi +1);
+			swap(arr, i, fi);
+			
+		}
+		
+	}
+	
+	public static void swap(char[] arr, int i, int fi) {
+		// TODO Auto-generated method stub
+		
+		var temp = arr[i];
+		arr[i] = arr[fi];
+		arr[fi] = temp;
+		
+	}
+
+
+	public static void printPermutationStrings(String s) {
+		printPermutationStrings(s.toCharArray(), 0);
+	}
 }
