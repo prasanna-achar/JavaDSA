@@ -1,6 +1,6 @@
 package Recursion;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -72,7 +72,19 @@ public class Main {
 		
 //		System.out.println(Problems.ropeCutting(15, 5, 8, 7));
 		
-		Problems.printPermutationStrings("abc");
+//		Problems.printPermutationStrings("abc");
+		
+		
+		List<Integer> list = new LinkedList<Integer>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		
+		List<List<Integer>> powerSets = PowerSet.getPowerSets(list);
+		for(List<Integer> l : powerSets) {
+			System.out.println(l
+					);
+		}
 	}
 
 }
