@@ -38,4 +38,84 @@ public class SearchingAlg {
 		Arrays.sort(org);
 		return binarySearch(org, 0,(arr.length - 1) /2, arr.length-1, key);
 	}
+	
+	
+	public static int ceil(int[] arr, int target) {
+		Arrays.sort(arr);
+		return findCeil(arr, 0, arr.length-1, target);
+	}
+
+	private static int findCeil(int[] arr, int l, int r, int target) {
+		// TODO Auto-generated method stub
+		if(l > r) {
+			return l < arr.length ? arr[l] : -1;
+		}
+		int m = (l + r) / 2;
+		
+		if(arr[m] == target) {
+			return arr[m];
+		}else if(arr[m] < target) {
+			return findCeil(arr, m+1, r, target);
+		}else {
+			return findCeil(arr, l, m-1, target);
+			
+		}
+		
+	}
+	
+	
+	
+	public static int floor(int[] arr, int target) {
+		return findFloor(arr, 0, arr.length-1, target);
+	}
+
+	private static int findFloor(int[] arr, int l, int r, int target) {
+		// TODO Auto-generated method stub
+		if(l > r) {
+			return r >= 0 ? arr[r] : -1;
+		}
+		int m = (l + r) / 2;
+		
+		if(arr[m] == target) {
+			return arr[m];
+		}
+		else if(arr[m] < target) {
+			return findFloor(arr, m+1, r, target);
+		}else {
+			return findFloor(arr, l, m -1, target);
+		}
+	
+	}
+	
+	
+	
+	private static int binraySearchForEqualOrLowerNumbersCount(int[] arr, int l, int r, int target) {
+		if(l > r) {
+			return r >= 0 ? r : -1;
+		}
+		
+		int m = (l + r) / 2;
+		
+		if(arr[m] == target) {
+			return m;
+		}else if(arr[m] < target) {
+			return binraySearchForEqualOrLowerNumbersCount(arr, m+1, r, target);
+		}else {
+			return binraySearchForEqualOrLowerNumbersCount(arr, l, m-1, target);			
+		}
+	}
+	
+	
+	public static int countEqualOrLowerNumbers(int[] arr, int target) {
+		int pos = binraySearchForEqualOrLowerNumbersCount(arr, 0, arr.length-1, target);
+		if( pos == -1) {
+			return 0;
+		}if(arr[pos] != target) {
+			return pos;
+		}
+		while(pos + 1 < arr.length && arr[pos + 1] == target) {
+			pos++;
+		}
+		return pos+1;
+	}
 }
