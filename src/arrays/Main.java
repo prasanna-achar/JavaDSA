@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {34, 65 , 22, 11, 77, 56, 87, 101};
+		int[] arr = {34, 65 , 22, 11,77 , 77, 77, 56, 87, 101};
 		Arrays.sort(arr);
 //		System.out.println(SearchingAlg.binarySearch(arr, 56));
 //		System.out.println(arr[SearchingAlg.binarySearch(arr, 56)]);
@@ -27,6 +27,14 @@ public class Main {
 		
 		
 //		System.out.println(SearchingAlg.countEqualOrLowerNumbers(arr, 77));
+		
+//		System.out.println(Arrays.toString(arr));
+//		System.out.println(Arrays.toString(SearchingAlg.getFirstAndLastIndex(arr, 77)));
+		
+		
+		int[] rotatedArray = {7, 8, 1, 2, 3, 4, 5, 6};
+		
+		System.out.println(RotatedArrayProblem.search(rotatedArray, 3));
 		
 	}
 

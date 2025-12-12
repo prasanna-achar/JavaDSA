@@ -118,4 +118,52 @@ public class SearchingAlg {
 		}
 		return pos+1;
 	}
+	
+	
+	private static void getFirstIndex(int[] arr, int l, int r, int target, int[] positions) {
+		if(l > r) {
+			return;
+		}
+		int m = (l + r) / 2;
+		if(arr[m] == target) {
+			positions[0] = m;
+			getFirstIndex(arr, l, m -1, target, positions);
+		}else if(arr[m] < target) {
+			getFirstIndex(arr, m+1, r, target, positions);		
+		}else {
+			getFirstIndex(arr, l, m -1, target, positions);
+		}
+	
+	}
+	
+	
+	private static void getLastIndex(int[] arr,int l, int r, int target, int[] positions) {
+		if(l > r) {
+			return;
+		}
+		int m = (l + r) / 2;
+		if(arr[m] == target) {
+			positions[1] = m;
+			getLastIndex(arr, m+1, r, target, positions);
+		}else if(arr[m] < target) {
+			getLastIndex(arr, m+1, r, target, positions);		
+		}else {
+			getLastIndex(arr, l, m -1, target, positions);
+		}
+	}
+	
+	
+	public static void getFirstIndex(int[] arr, int target, int[] positions) {
+		 getFirstIndex(arr, 0, arr.length-1, target,positions);
+	}
+	public static void getLastIndex(int[] arr, int target, int[] positions) {
+		getLastIndex(arr, 0, arr.length-1, target, positions);
+	}
+	
+	public static int[] getFirstAndLastIndex(int[] arr, int target) {
+		int[] positions = {-1, -1};
+		getFirstIndex(arr, target, positions);
+		getLastIndex(arr, target, positions);
+		return positions;
+	}
 }
