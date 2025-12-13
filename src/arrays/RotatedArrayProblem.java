@@ -6,11 +6,12 @@ public class RotatedArrayProblem {
 	  
 	
 	private static int getPivotIndex(int[] arr, int l, int r) {
+//		System.out.println("L: "+l+" R:"+r);
 		if(l > r) {
 			return 0;
 		}
 		int m = ( l + r )/ 2;
-		if(arr[m] < arr[m+1] && arr[m] < arr[m-1]) {
+		if(arr[m] < arr[m+1] && (m > 0 && arr[m] < arr[m-1])) {
 			return m;
 		}else if(arr[m] > arr[r]) {
 			return getPivotIndex(arr, m+1, r);
@@ -45,10 +46,12 @@ public class RotatedArrayProblem {
 	public static int search(int[] arr, int target) {
 		int pivot = getPivotIndex(arr);
 		System.out.println("Pivot index: "+ pivot);
-		int pos = binarySearch(arr, 0, pivot-1, target);
-		if(pos == -1) {
-			pos = binarySearch(arr, pos, arr.length-1, target);
+		
+		if( pivot != 0 && (target >= arr[0] && target <= arr[pivot-1])) {
+			return binarySearch(arr, 0, pivot-1, target);
+		}else {
+			return binarySearch(arr, pivot, arr.length-1, target);
 		}
-		return pos;
+		
 	}
 }

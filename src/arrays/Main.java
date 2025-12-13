@@ -32,8 +32,8 @@ public class Main {
 //		System.out.println(Arrays.toString(SearchingAlg.getFirstAndLastIndex(arr, 77)));
 		
 		
-		int[] rotatedArray = {7, 8, 1, 2, 3, 4, 5, 6};
-		
+		int[] rotatedArray = {5, 4, 6, 7, 8, 1, 2, 3};
+		Arrays.sort(rotatedArray);
 		System.out.println(RotatedArrayProblem.search(rotatedArray, 3));
 		
 	}
