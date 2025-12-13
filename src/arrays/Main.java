@@ -31,11 +31,12 @@ public class Main {
 //		System.out.println(Arrays.toString(arr));
 //		System.out.println(Arrays.toString(SearchingAlg.getFirstAndLastIndex(arr, 77)));
 		
+		long curTime = System.currentTimeMillis();
 		
 		int[] rotatedArray = {5, 4, 6, 7, 8, 1, 2, 3};
 		Arrays.sort(rotatedArray);
 		System.out.println(RotatedArrayProblem.search(rotatedArray, 3));
-		
+		System.out.println(System.currentTimeMillis() - curTime);
 	}
 
 }
