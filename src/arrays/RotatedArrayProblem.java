@@ -46,12 +46,37 @@ public class RotatedArrayProblem {
 	public static int search(int[] arr, int target) {
 		int pivot = getPivotIndex(arr);
 		System.out.println("Pivot index: "+ pivot);
-		
+		int l , r;
 		if( pivot != 0 && (target >= arr[0] && target <= arr[pivot-1])) {
-			return binarySearch(arr, 0, pivot-1, target);
-		}else {
-			return binarySearch(arr, pivot, arr.length-1, target);
+//			return binarySearch(arr, 0, pivot-1, target);
+			l = 0; r= pivot -1;
+			
+			while(l <= r) {
+				int m = (l + r) /2;
+				if(arr[m] == target) {
+					return m;
+				}else if(target > arr[m]) {
+					l = m+1;
+				}else {
+					r = m-1;
+				}
+			}
+			
+			}else {
+				l = pivot; r= arr.length-1;
+				
+				while(l <= r) {
+					int m = (l + r) /2;
+					if(arr[m] == target) {
+						return m;
+					}else if(target > arr[m]) {
+						l = m+1;
+					}else {
+						r = m-1;
+					}
+				}
 		}
-		
+		return -1;
+
 	}
 }
