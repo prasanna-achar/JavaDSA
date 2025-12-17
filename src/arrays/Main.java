@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] ar1 = {34, 65 , 22, 11,77 , 77, 56, 87, 101};
+		int[] ar1 = {1, 2, 8, 17};
 		Arrays.sort(ar1);
 //		System.out.println(SearchingAlg.binarySearch(arr, 56));
 //		System.out.println(arr[SearchingAlg.binarySearch(arr, 56)]);
@@ -21,7 +21,7 @@ public class Main {
 		
 		// Bitonic Array Search 
 		
-		int[] ar2 = {10, 20, 30, 40, 60, 50, 70};
+		int[] ar2 = {5, 6, 7, 19, 21, 25};
 //		System.out.println(BitonicArray.searchElement(bitonicArray, 50));
 		
 		
@@ -41,7 +41,7 @@ public class Main {
 		
 		
 		
-		System.out.print(TwoArrays.findMedian(ar1, ar2));
+		System.out.print(TwoArrays.getMedian(ar1, ar2));
 	}
 
 }
