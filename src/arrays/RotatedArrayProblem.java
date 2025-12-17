@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class RotatedArrayProblem {
 	
 	 
@@ -78,5 +81,28 @@ public class RotatedArrayProblem {
 		}
 		return -1;
 
+	}
+	
+	public static void printAscedingAndDescending(Integer[] arr) {
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+		Arrays.sort(arr, Collections.reverseOrder());
+		System.out.println(Arrays.toString(arr));
+		
+	}
+	
+	public static void printAscendingAndDescending(int[] arr) {
+
+	    // Ascending
+	    int[] asc = Arrays.stream(arr).sorted().toArray();
+	    System.out.println(Arrays.toString(asc));
+
+	    // Descending
+	    int[] desc = Arrays.stream(arr)
+	                       .boxed()
+	                       .sorted((a, b) -> b - a)
+	                       .mapToInt(Integer::intValue)
+	                       .toArray();
+	    System.out.println(Arrays.toString(desc));
 	}
 }

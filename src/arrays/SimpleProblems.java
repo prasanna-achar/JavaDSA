@@ -87,4 +87,52 @@ public class SimpleProblems {
 		
 		return max2;
 	}
+	public static int[] findRepeatingAndMissing(int[] arr) {
+
+		int n = arr.length;
+		
+		long SN = (n * (n + 1)) / 2;
+		long S2N = (n * (n + 1) * (2 * n + 1)) / 6;
+		
+		long S = 0, S2 = 0;
+		for(int x : arr) {
+			S += x;
+			S2 += (x * (long)x);
+		}
+		
+		long eq1 = SN - S; // x - y
+		long eq2 = S2N - S2;   // (x - y)(x + y) = x^2 - y^2
+		eq2 = eq2 / eq1;
+		
+		
+		long missing = (eq1 + eq2) / 2;
+		long repeating = eq2 - missing;
+		/* 
+		 * Even though we got x - y = value1 we can't find x and y value with one equation so square of values
+		 * x^2 - y^2 = value2 we got and we can further simplify it like
+		 * (x - y)(x + y)   ::::: (x - y)(x + y) = x^2 - y^2
+		 * the above equation can also mention as
+		 * value1 * ( x + y ) = value2
+		 * x + y = value2 / value1 // let's assume value3
+		 * 
+		 * now we have
+		 * x-y = value1
+		 * x+y = value3
+		 * 
+		 * Sum the equation
+		 * 
+		 * 2x = value (value1 + value3)
+		 * x = value / 2;  and it is the repeating value
+		 * 
+		 * find y 
+		 * x + y = value1
+		 * y = value1 - x;
+		 * 
+		 * */
+		
+		
+		return new int[] {(int)repeating , (int)missing};
+		
+		
+	}
 }
