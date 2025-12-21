@@ -7,11 +7,11 @@ public class Main {
 
 	
 	
-	private static void test(int[] arr) {
-        int[] result = SimpleProblems.findRepeatingAndMissing(arr);
-        System.out.println(Arrays.toString(arr) + " -> " +
-                           Arrays.toString(result));
-    }
+//	private static void test(int[] arr) {
+//        int[] result = SimpleProblems.findRepeatingAndMissing(arr);
+//        System.out.println(Arrays.toString(arr) + " -> " +
+//                           Arrays.toString(result));
+//    }
 	
 	
 	
@@ -54,16 +54,19 @@ public class Main {
 //		System.out.print(TwoArrays.getMedian(ar1, ar2));
 //		RotatedArrayProblem.printAscendingAndDescending(ar2);
 		
-		test(new int[]{1, 2, 2, 4, 5});        // [2, 3]
-        test(new int[]{1, 3, 3});              // [3, 2]
-        test(new int[]{4, 3, 6, 2, 1, 1});      // [1, 5]
-        test(new int[]{2, 2});                 // [2, 1]
-        test(new int[]{1, 1, 2, 3, 4});         // [1, 5]
-        test(new int[]{5, 3, 4, 2, 5, 1});      // [5, 6]
-        test(new int[]{3, 1, 3, 4, 5, 6, 7});   // [3, 2]
-        test(new int[]{6, 1, 2, 3, 4, 6});      // [6, 5]
-        test(new int[]{1, 2, 3, 4, 4});         // [4, 5]
-        test(new int[]{7, 3, 4, 5, 5, 6, 1});   // [5, 2]
+//		test(new int[]{1, 2, 2, 4, 5});        // [2, 3]
+//        test(new int[]{1, 3, 3});              // [3, 2]
+//        test(new int[]{4, 3, 6, 2, 1, 1});      // [1, 5]
+//        test(new int[]{2, 2});                 // [2, 1]
+//        test(new int[]{1, 1, 2, 3, 4});         // [1, 5]
+//        test(new int[]{5, 3, 4, 2, 5, 1});      // [5, 6]
+//        test(new int[]{3, 1, 3, 4, 5, 6, 7});   // [3, 2]
+//        test(new int[]{6, 1, 2, 3, 4, 6});      // [6, 5]
+//        test(new int[]{1, 2, 3, 4, 4});         // [4, 5]
+//        test(new int[]{7, 3, 4, 5, 5, 6, 1});   // [5, 2]
+		
+		
+		System.out.println(AllocateBooks.solution(new int[] {12, 34, 67, 90}, 2));
 	}
 
 }
