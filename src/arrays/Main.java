@@ -1,11 +1,7 @@
 package arrays;
 
-import java.util.Arrays;
-
 
 public class Main {
-
-	
 	
 //	private static void test(int[] arr) {
 //        int[] result = SimpleProblems.findRepeatingAndMissing(arr);
@@ -17,8 +13,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] ar1 = {1, 2, 8, 17};
-		Arrays.sort(ar1);
+//		int[] ar1 = {1, 2, 8, 17};
+//		Arrays.sort(ar1);
 //		System.out.println(SearchingAlg.binarySearch(arr, 56));
 //		System.out.println(arr[SearchingAlg.binarySearch(arr, 56)]);
 		
@@ -27,11 +23,13 @@ public class Main {
 		
 //		System.out.println(SimpleProblems.secondSmallest(arr));
 		
-		
+//		sum(3, 5);
+//		sum(3L, 5L);
+//		sum(3, 6L);
 		
 		// Bitonic Array Search 
 		
-		int[] ar2 = {5, 6, 7,4 ,23, 19, 21, 25};
+//		int[] ar2 = {5, 6, 7,4 ,23, 19, 21, 25};
 //		System.out.println(BitonicArray.searchElement(bitonicArray, 50));
 		
 		
@@ -66,7 +64,11 @@ public class Main {
 //        test(new int[]{7, 3, 4, 5, 5, 6, 1});   // [5, 2]
 		
 		
-		System.out.println(AllocateBooks.solution(new int[] {12, 34, 67, 90}, 2));
+//		System.out.println(PaintersPartition.solution(new int[] {10, 20, 30, 40}, 2, 2));
+		
+		
+		
+		
 	}
 
 }

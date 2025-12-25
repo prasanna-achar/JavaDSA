@@ -4,7 +4,37 @@ import java.util.Arrays;
 
 public class AllocateBooks {
 	
-	
+	/*
+	Problem: Allocate Books
+
+	You are given an array arr[] of size N, where each element represents
+	the number of pages in a book, and an integer M representing the number
+	of students.
+
+	Allocate books to students such that:
+	1. Each student gets at least one book.
+	2. Each book is allocated to exactly one student.
+	3. Books allocated to a student must be contiguous.
+	4. The objective is to minimize the maximum number of pages assigned
+	   to any student.
+
+	If it is not possible to allocate books according to the above rules,
+	return -1.
+
+	Example:
+	Input:
+	arr = [12, 34, 67, 90], M = 2
+
+	Output:
+	113
+
+	Explanation:
+	One optimal allocation is:
+	Student 1 -> [12, 34, 67] (113 pages)
+	Student 2 -> [90] (90 pages)
+	The maximum pages allocated to a student is minimized to 113.
+	*/
+
 	
 	private static boolean isPossible(int[] arr, int studentCount, int pageLimit) {
 		int studentNumber = 1;
@@ -45,6 +75,6 @@ public class AllocateBooks {
 				l = mid + 1;
 			}
 		}
-		return l;
+		return res;
 	}
 }
