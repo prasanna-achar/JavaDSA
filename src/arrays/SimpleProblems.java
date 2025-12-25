@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class SimpleProblems {
 
 	private static int max(int[] arr) {
@@ -134,5 +137,54 @@ public class SimpleProblems {
 		return new int[] {(int)repeating , (int)missing};
 		
 		
+	}
+	
+	
+	public static int sqrt(int value) {
+		int l = 0;
+		int h = value / 2;
+		int res = -1;
+		while(l <= h) {
+			int mid = (l + h) / 2;
+			if((mid * mid) == value) {
+				return mid;
+			}else if((mid * mid) < value) {
+				res = mid;
+				l = mid + 1;
+			}else {
+				h = mid - 1;
+			}
+		}
+		return res;
+	}
+	
+	
+	public static void removeDuplicates1(int[] arr) {
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		for(int i =0; i < arr.length - 1; i++) {
+			if(arr[i] != arr[i+1]) {
+				al.add(arr[i]);
+			}
+				
+		}
+		if(arr[arr.length-1] == arr[arr.length-2]) {
+			al.add(arr[arr.length-1]);
+		}
+		
+		
+		arr = al.stream().mapToInt(Integer :: intValue).toArray();
+	}
+	public static void removeDuplicates2(int[] arr) {
+		
+		
+		int rd = 0;
+		for(int i = 1; i < arr.length; i++) {
+			if(arr[i] != arr[i -1]) {
+				rd++;
+				arr[rd] = arr[i];
+			}
+		}
+		arr = Arrays.copyOf(arr, rd + 1);
+		Math.sqrt(4);
 	}
 }
