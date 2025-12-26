@@ -1,6 +1,9 @@
 package string;
 
 public class LongestPrefix {
+	
+	
+	
 	public static String solution(String[] words) {
 		String prefix = words[0];
 		

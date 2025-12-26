@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 
 public class Main {
 	
@@ -66,7 +67,10 @@ public class Main {
 		
 //		System.out.println(PaintersPartition.solution(new int[] {10, 20, 30, 40}, 2, 2));
 		
-		
+		int[] arr = {1, 2, 3, 4, 5, 6};
+		System.out.println(Arrays.toString(arr));
+		new RotateArray().solution2(arr, 2);
+		System.out.println(Arrays.toString(arr));
 		
 		
 	}
