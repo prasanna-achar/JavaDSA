@@ -187,4 +187,13 @@ public class SimpleProblems {
 		arr = Arrays.copyOf(arr, rd + 1);
 		Math.sqrt(4);
 	}
+	
+	
+	public static void inverseArray(int[] arr) {
+		int[] inverseArr = new int[arr.length];
+		for(int i =0; i < arr.length; i++) {
+			inverseArr[arr[i]] = i;
+		}
+		System.out.println(Arrays.toString(inverseArr));
+	}
 }
