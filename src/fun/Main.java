@@ -55,5 +55,6 @@ public class Main {
             out.append(e.getKey()).append(" ").append(e.getValue()).append("\n");
         }
         System.out.print(out.toString());
+        StringBuffer s = new StringBuffer();
     }
 }
