@@ -1,6 +1,6 @@
 package arrays;
 
-import java.io.Console;
+import java.util.Scanner;
 
 public class FrequencyOfTheElementsInArray {
 
@@ -10,7 +10,11 @@ public class FrequencyOfTheElementsInArray {
 	
 	void solution(int [] arr) {
 //		
+		Scanner sc = new Scanner(System.in);
 
+		
+		
+		
 		char[] p =System.console().readPassword();
 		System.out.println(p);
 	}

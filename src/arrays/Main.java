@@ -80,12 +80,17 @@ public class Main {
 //		SimpleProblems.inverseArray(arr);
 //		System.out.println(Arrays.toString(arr));
 		
-		int[] arr = {10, 10, 20, 20, 20, 30, 40, 40, 50, 50, 50};
+//		int[] arr = {10, 10, 20, 20, 20, 30, 40, 40, 50, 50, 50};
+//		
+//		FrequencyOfTheElementsInArray f= new  FrequencyOfTheElementsInArray();
+//		
+//		
+//		f.solution(arr);
 		
-		FrequencyOfTheElementsInArray f= new  FrequencyOfTheElementsInArray();
 		
+		int[] arr = { 4, 2, 0, 3, 2, 5};
 		
-		f.solution(arr);
+		new TrapWaterProblem().solution2(arr);
 	}
 
 }
