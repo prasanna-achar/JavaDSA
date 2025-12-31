@@ -88,9 +88,18 @@ public class Main {
 //		f.solution(arr);
 		
 		
-		int[] arr = { 4, 2, 0, 3, 2, 5};
+//		int[] arr = { 4, 2, 0, 3, 2, 5};
+//		
+//		new TrapWaterProblem().solution3(arr);
 		
-		new TrapWaterProblem().solution2(arr);
+		
+		
+		
+//		System.out.print(SimpleProblems.MaximumConsecutiveOnes(new int[] {
+//				1, 1, 1, 0, 1, 0, 1, 1, 1, 
+//		}));
+		
+//		System.out.println(new MaximumSubArray().kadaneSolution(new int[] {-2,1,-3,4,-1,2,1,-5,4}));
 	}
 
 }

@@ -196,4 +196,25 @@ public class SimpleProblems {
 		}
 		System.out.println(Arrays.toString(inverseArr));
 	}
+	
+	
+	public static int MaximumConsecutiveOnes(int[] arr) {
+		if(arr.length == 1) {
+			return arr[0];
+		}
+		
+		int res = 0;
+		int count = 0;
+		for(int i =0; i < arr.length; i++) {
+			if(arr[i] == 1) {
+				count++;
+			}else {
+				if(count > res) {
+					res = count;
+				}
+				count = 0;
+			}
+		}
+		return res;
+	}
 }

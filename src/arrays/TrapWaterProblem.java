@@ -63,4 +63,29 @@ public class TrapWaterProblem {
 		}
 		System.out.println(res);
 	}
+	
+	void solution3(int[] arr) {
+		int l = 0; int r = arr.length-1;
+		int lhb = arr[l]; int rhb = arr[r];
+		int res = 0;
+		while(l <= r) {
+			if(lhb <= rhb) {
+				if(arr[l] >= lhb) {
+					lhb = arr[l];
+				}else {
+					res += (lhb - arr[l]);
+				}
+				l++;
+			}else {
+				if(arr[r] >= rhb) {
+					rhb = arr[r];
+				}else {
+					res += (rhb - arr[r]);
+				}
+				r--;
+			}
+			
+		}
+		System.out.println("result: " + res);
+	}
 }
