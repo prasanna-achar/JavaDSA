@@ -100,6 +100,18 @@ public class Main {
 //		}));
 		
 //		System.out.println(new MaximumSubArray().kadaneSolution(new int[] {-2,1,-3,4,-1,2,1,-5,4}));
+		
+		
+		
+//		SlidingWindow.solution(new int[] {-2,1,-3,1, 1,4,-1,2,1,-5,4}, 4);
+		
+		int[] arr = {0,1, 1, 0, 0, 0, 1};
+
+//		Consecutive01array.flipMinimumCosecutive(arr);
+		
+//		System.out.println(Arrays.toString(arr));
+		
+		Consecutive01array.groupMinimumConsecutiveElements(arr);
 	}
 
 }

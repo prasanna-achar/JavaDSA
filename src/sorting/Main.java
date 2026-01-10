@@ -9,7 +9,7 @@ public class Main {
 		
 		int[] arr = {3, 5, 1, 6, 7, 2};
 		
-		new InsertionSort().solution(arr);
+		new MergeSort().solution(arr);
 		
 		System.out.println(Arrays.toString(arr));
 		
